@@ -9,5 +9,9 @@ echo "\
 [server]\n\
 headless = true\n\
 enableCORS=false\n\
-port = $PORT\n\
+port = \$PORT\n\
 " > ~/.streamlit/config.toml
+
+# Create an NLTK data directory and download required resources
+mkdir -p ~/.nltk_data
+python -m nltk.downloader -d ~/.nltk_data wordnet stopwords
