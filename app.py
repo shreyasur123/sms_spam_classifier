@@ -8,6 +8,7 @@ nltk.download('stopwords')
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
+nltk.data.path.append('/home/adminuser/.nltk_data')
 
 ps = PorterStemmer()
 
