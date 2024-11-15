@@ -7,7 +7,7 @@ from nltk.stem.wordnet import WordNetLemmatizer
 # Download NLTK resources only when needed
 def preprocess_text(text):
     nltk.download('wordnet', quiet=True)
-    nltk.download('punkt', quiet=True)
+    nltk.download('punkt_tab', quiet=True)
     nltk.download('stopwords', quiet=True)
     lemmatizer = WordNetLemmatizer()
     text = text.lower()
