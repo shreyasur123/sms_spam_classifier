@@ -18,12 +18,19 @@ def main():
     
     st.markdown("""
     <style>
+    :root {
+        --bg-color: #1a1a1a;
+        --text-color: #f0f2f6;
+        --accent-color: #007bff;
+        --accent-hover: #0056b3;
+    }
     body {
-        background-color: #f0f2f6;
-        font-family: 'Roboto', sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        font-family: 'Montserrat', sans-serif;
     }
     h1 {
-        color: #333;
+        color: var(--accent-color);
         font-weight: bold;
         text-align: center;
         margin-top: 2rem;
@@ -31,18 +38,19 @@ def main():
     }
     .stTextArea, .stButton > button {
         border-radius: 8px;
-        border: 1px solid #ddd;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border: 1px solid #444;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         font-size: 1rem;
         padding: 1rem;
+        background-color: #2b2b2b;
+        color: var(--text-color);
     }
     .stButton > button {
-        background-color: #007bff;
-        color: white;
+        background-color: var(--accent-color);
         cursor: pointer;
     }
     .stButton > button:hover {
-        background-color: #0056b3;
+        background-color: var(--accent-hover);
     }
     .result {
         font-size: 1.2rem;
