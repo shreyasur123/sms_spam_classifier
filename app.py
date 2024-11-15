@@ -4,7 +4,9 @@ import nltk
 from nltk.corpus import stopwords
 from nltk.stem.wordnet import WordNetLemmatizer
 
-# Download NLTK resources only when needed
+primaryColor="#1C274C"
+
+
 def preprocess_text(text):
     nltk.download('wordnet', quiet=True)
     nltk.download('punkt_tab', quiet=True)
