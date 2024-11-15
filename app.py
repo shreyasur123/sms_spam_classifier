@@ -8,6 +8,7 @@ from nltk.stem.wordnet import WordNetLemmatizer
 def preprocess_text(text):
     nltk.download('wordnet', quiet=True)
     nltk.download('punkt', quiet=True)
+    nltk.download('stopwords', quiet=True)
     lemmatizer = WordNetLemmatizer()
     text = text.lower()
     text = [lemmatizer.lemmatize(word) for word in nltk.word_tokenize(text) if word.isalnum() and word not in stopwords.words('english')]
