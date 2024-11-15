@@ -35,7 +35,7 @@ def main():
                 st.write(f"Probability: {probability:.2%}")
             else:
                 st.success("This message is classified as NOT SPAM.")
-                st.write(f"Probability: {(1 - probability):.2%}")
+                st.write(f"Probability: {probability:.2%}")
         else:
             st.warning("Please enter some text to classify.")
 
