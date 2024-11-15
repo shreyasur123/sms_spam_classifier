@@ -3,6 +3,7 @@ import pickle
 import nltk
 nltk.download('wordnet')
 nltk.download('punkt')
+nltk.download('punkt_tab')
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 
