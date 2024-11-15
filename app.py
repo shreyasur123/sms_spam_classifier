@@ -21,13 +21,15 @@ def main():
     :root {
         --bg-color: #1a1a1a;
         --text-color: #f0f2f6;
-        --accent-color: #007bff;
-        --accent-hover: #0056b3;
+        --accent-color: #9b59b6;
+        --accent-hover: #8e44ad;
+        --success-color: #2ecc71;
+        --danger-color: #e74c3c;
     }
     body {
         background-color: var(--bg-color);
         color: var(--text-color);
-        font-family: 'Montserrat', sans-serif;
+        font-family: 'Quattrocento Sans', sans-serif;
     }
     h1 {
         color: var(--accent-color);
@@ -57,6 +59,12 @@ def main():
         font-weight: bold;
         margin-top: 2rem;
     }
+    .result.success {
+        color: var(--success-color);
+    }
+    .result.danger {
+        color: var(--danger-color);
+    }
     </style>
     """, unsafe_allow_html=True)
 
@@ -75,13 +83,14 @@ def main():
             probability = model.predict_proba(vectorized_input)[0][prediction]
 
             if prediction == 1:
-                st.markdown('<div class="result" style="color:#dc3545;">This message is classified as SPAM.</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="result danger">This message is classified as SPAM.</div>', unsafe_allow_html=True)
                 st.write(f"Probability: {probability:.2%}")
             else:
-                st.markdown('<div class="result" style="color:#28a745;">This message is classified as NOT SPAM.</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="result success">This message is classified as NOT SPAM.</div>', unsafe_allow_html=True)
                 st.write(f"Probability: {probability:.2%}")
         else:
             st.warning("Please enter some text to classify.")
 
 if __name__ == "__main__":
     main()
+</antArtifac
